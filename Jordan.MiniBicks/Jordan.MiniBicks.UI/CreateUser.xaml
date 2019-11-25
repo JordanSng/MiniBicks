@@ -20,14 +20,18 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <StackPanel Grid.Column="0" VerticalAlignment="Center" Height="192">
+            <StackPanel Grid.Column="0" VerticalAlignment="Center" Height="215">
+                <Label Margin="50 0" Content="Login :"></Label>
+                <TextBox x:Name="Login" Margin="50 0"></TextBox>
                 <Label Margin="50 0" Content="Nom :"></Label>
                 <TextBox x:Name="Nom" Margin="50 0"></TextBox>
                 <Label Margin="50 0" Content="Prenom :"></Label>
                 <TextBox x:Name="Prenom" Margin="50 0"></TextBox>
             </StackPanel>
 
-            <StackPanel Grid.Column="1" VerticalAlignment="Center" Height="192">
+            <StackPanel Grid.Column="1" VerticalAlignment="Center" Height="215">
+                <Label Margin="50 0" Content="Adresse :"></Label>
+                <TextBox x:Name="Address" Margin="50 0"></TextBox>
                 <Label Margin="50 0" Content="Mot De Passe :"></Label>
                 <PasswordBox x:Name="Mdp" Margin="50 0"></PasswordBox>
                 <Label Margin="50 0" Content="Confirmez Mot De Passe :"></Label>

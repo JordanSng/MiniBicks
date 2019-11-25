@@ -28,8 +28,13 @@ namespace Jordan.MiniBicks.UI
         {
             if (Mdp.Password == ConfMdp.Password)
             {
-                new MiniBicks.Lib.UserFunction().CreateUser(Nom.Text, Prenom.Text,Mdp.Password);
+                new MiniBicks.Lib.UserFunction().CreateUser(Nom.Text, Prenom.Text, Login.Text,Address.Text,Mdp.Password);
                 MessageBox.Show("Utilisateur Enregistré");
+            }
+            else
+            {
+                MessageBox.Show("Les mots de passes ne sont pas identiques");
+
             }
         }
 
