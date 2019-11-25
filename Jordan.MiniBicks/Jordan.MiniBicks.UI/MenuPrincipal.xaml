@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Jordan.MiniBicks.UI"
         mc:Ignorable="d"
-        Title="MenuPrincipal" Height="450" Width="800">
+        Title="MenuPrincipal" Height="300" Width="300">
     <Grid>
-        
+        <StackPanel Margin="10 10 10 10">
+            <Button Height="25" Margin="10 10 10 10" x:Name="ButtonAbs" Click="ButtonAbs_OnClick"> Créer une absence</Button>
+            <Button Height="25" Margin="10 10 10 10" x:Name="ButtonRemb" Click="ButtonRemb_OnClick"></Button>
+            <Button Height="25" Margin="10 10 10 10"></Button>
+            <Button Height="25" Margin="10 10 10 10"></Button>
+            <TextBlock x:Name="Username" Height="25" Margin="10 10 10 0"></TextBlock>
+            <TextBlock x:Name="UserId" Height="25" Margin="10 0 10 10"></TextBlock>
+        </StackPanel>
     </Grid>
 </Window>

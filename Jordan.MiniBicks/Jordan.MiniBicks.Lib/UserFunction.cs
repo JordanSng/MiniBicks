@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Jordan.MiniBicks.Data;
 using Jordan.MiniBicks.Data.Models;
-using Microsoft.EntityFrameworkCore.Internal;
-using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 
 namespace Jordan.MiniBicks.Lib
 {
@@ -45,6 +41,33 @@ namespace Jordan.MiniBicks.Lib
                     return false;
                 }
 
+            }
+        }
+
+        public int GetUserId(string username, string password)
+        {
+            using (var bicksContext = new BicksContext())
+            {
+                var userId = from p in bicksContext.Users
+                    where p.Username == username && p.Password == password
+                    select p.UserId;
+
+                int idUser = userId.First();
+                return idUser;
+            }
+        }
+
+        public void CreateAbs(int userId, string justificatif, int absenceId)
+        {
+            using (var bickContext = new BicksContext())
+            {
+                AbsenceUser absenceUser = new AbsenceUser();
+                absenceUser.UserId = userId;
+                absenceUser.Justificatif = justificatif;
+                absenceUser.AbsenceId = absenceId;
+
+                bickContext.AbsenceUsers.Add(absenceUser);
+                bickContext.SaveChanges();
             }
         }
     }

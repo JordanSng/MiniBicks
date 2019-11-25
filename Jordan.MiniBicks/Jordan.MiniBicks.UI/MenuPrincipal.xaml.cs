@@ -1,14 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Jordan.MiniBicks.UI
 {
@@ -20,6 +11,19 @@ namespace Jordan.MiniBicks.UI
         public MenuPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void ButtonAbs_OnClick(object sender, RoutedEventArgs e)
+        {
+            CreateAbs createAbs = new CreateAbs();
+            createAbs.UserId.Text = UserId.Text;
+            createAbs.Show();
+            Close();
+        }
+
+        private void ButtonRemb_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }

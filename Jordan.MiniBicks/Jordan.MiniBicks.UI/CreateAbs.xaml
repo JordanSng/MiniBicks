@@ -7,6 +7,27 @@
         mc:Ignorable="d"
         Title="CreateAbs" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="390"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Créer une absence" Foreground="#FB8C00" VerticalAlignment="Center" FontSize="30" HorizontalAlignment="Center"></TextBlock>
+        <StackPanel Grid.Row="1">
+            <StackPanel Margin="0 10 0 0" VerticalAlignment="Center" Orientation="Horizontal">
+                <TextBlock x:Name="IdUtilisateur" Visibility="Collapsed" Margin="0 10" Width="150"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Margin="50 10 0 10" Width="100" Content="Categorie :"></Label>
+                <ComboBox x:Name="Categorie" Margin="0" Width="100" Height="25">
+                </ComboBox>
+            </StackPanel>
+            <StackPanel>
+                <Label Margin="50 10 0 10" Content="Justificatif :"></Label>
+                <TextBox x:Name="Justificatif" Padding="5" VerticalContentAlignment="Top" Margin="50 0" Height="120" BorderThickness="2" BorderBrush="#37474F"></TextBox>
+            </StackPanel>
+            <Button x:Name="CreerUnTicket" Click="CreerUneAbsence_OnClick" Margin="500 50 40 0" Content="Enregistrer"/>
+            <TextBlock x:Name="UserId"></TextBlock>
+        </StackPanel>
     </Grid>
 </Window>
